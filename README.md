@@ -29,20 +29,30 @@ Solana Auditors Bootcamp 2024:
 
 # What to prepare?
 
+> [!NOTE]
+> We also prepared Docker Image with all required dependencies already installled, see below.
+
+## Manual Setup
+
 [WSL]: https://learn.microsoft.com/en-us/windows/wsl/install
 [Solana]: https://docs.solanalabs.com/cli/install
 [Anchor]: https://www.anchor-lang.com/docs/installation
-
-## Setup
-
-> [!NOTE]
-> We also prepared Docker Image with all required dependencies already installled, see below.
+[Honggfuzz]: https://github.com/rust-fuzz/honggfuzz-rs#how-to-use-this-crate
 
 | Setup                                      | Description                     | Version               | How to Install                |
 | -------------------------------------------| --------------------------------| ----------------------| ------------------------------|
 | Windows subsystem for Linux(WSL)           | optional but highly recommended | 2.0                   | [Instructions][WSL]           |
 | Solana tool suite                          | -                               | 1.18.18               | [Instructions][Solana]        |
 | Anchor framework                           | -                               | 0.30.1                | [Instructions][Anchor]        |
+| Honggfuzz                                  | -                               | 0.5.56                | [Instructions][Honggfuzz]     |
+
+
+
+> [!NOTE]
+> For step by step guide follow [Manual Setup](./Manual-Setup/README.md)
+
+
+## Docker Image
 
 > [!TIP]
 > **Install Docker**
