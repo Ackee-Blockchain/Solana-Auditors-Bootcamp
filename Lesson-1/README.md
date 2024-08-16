@@ -216,7 +216,7 @@ where
 
 [Docs](https://docs.rs/anchor-lang/latest/anchor_lang/attr.account.html)
 
-An attribute for a data structure representing a Solana account. Gnerates implementation for the given Traits
+An attribute for a data structure representing a Solana account. Generates implementation for the given Traits
 
 - AccountSerialize
 - AccountDeserialize
