@@ -8,6 +8,7 @@
     - [provider](#provider)
     - [scripts](#scripts)
     - [registry](#registry)
+    - [features](#features)
     - [workspace](#workspace)
     - [programs](#programs)
     - [test](#test)
@@ -248,11 +249,17 @@ url = "https://api.apr.dev"
 
 ### features
 
-This tells the IDL to include seed generation for PDA Accounts. The default is false
+Account resolution refers to the ability of clients to resolve accounts without having to manually specify them when sending transactions.
 
 ```toml
 [features]
-seeds = true
+resolution = true
+```
+
+Adds a documentation requirement on use of `UncheckedAccount` and `AccountInfo`.
+```toml
+[features]
+skip-lint = false
 ```
 
 ### workspace
