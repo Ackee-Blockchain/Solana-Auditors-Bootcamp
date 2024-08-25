@@ -29,8 +29,9 @@ Solana Auditors Bootcamp 2024:
 
 # What to prepare?
 
-> [!NOTE]
-> We also prepared Docker Image with all required dependencies already installled, see below.
+> [!important]
+> We also prepared Docker Image with all required dependencies already installled, for both [x86](#docker-image-x86) and [ARM](#docker-image-arm) architectures to use for Trident.
+
 
 ## Manual Setup
 
@@ -52,7 +53,7 @@ Solana Auditors Bootcamp 2024:
 > For step by step guide follow [Manual Setup](./Manual-Setup/README.md)
 
 
-## Docker Image
+## Docker Image x86
 
 > [!TIP]
 > **Install Docker**
@@ -83,6 +84,36 @@ Solana Auditors Bootcamp 2024:
 > ```
 > It is also possible to start/stop the Imagre from the Docker Desktop GUI.
 
+## Docker Image ARM
+
+> [!TIP]
+> **Install Docker**
+> You can check this guide [Install Docker Engine](https://docs.docker.com/engine/install/)
+
+
+> [!IMPORTANT]
+> To use the pre-built Docker image for this course, you can pull the image from Docker Hub:
+> ```bash
+> docker pull ackeexyz/solana-auditors-bootcamp-arm:latest
+> ```
+> Then run the following command. This will create new container.
+> ```bash
+> docker run -it --name solana-auditors-bootcamp-arm -p 8899:8899 -p 9900:9900 -p 8000:8000 -p 8080:8080 ackeexyz/solana-auditors-bootcamp-arm:latest
+> ```
+> Then visit the following url
+>
+>   http://localhost:8080/
+>
+> When you want to continue work inside the Docker Image, use
+> ```bash
+> docker start solana-auditors-bootcamp-arm
+> ```
+> and again visit the URL.
+> To stop the Image, use
+> ```bash
+> docker stop solana-auditors-bootcamp-arm
+> ```
+> It is also possible to start/stop the Imagre from the Docker Desktop GUI.
 
 -----
 
