@@ -7,7 +7,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-trident_lesson_part_i = "6p3iZzv4Q7GHq1AQAHpgEjj5HxBtif5mtxKYsmFWv57M"
+trident_lesson_part_ii = "3np32v6MbFMhTF9bq8A4bx2yi7cFUGByDW4YzB6jyDVU"
 
 [registry]
 url = "https://api.apr.dev"
