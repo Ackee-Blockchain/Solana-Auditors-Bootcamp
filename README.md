@@ -20,8 +20,8 @@ Solana Auditors Bootcamp 2024:
 |Week 2|[**Integration Tests and Unit Tests**](./Lesson-2/README.md)|-|
 |Week 3|[**Fuzzing with Trident I**](./Lesson-3/README.md)|[**Fuzzing with Trident**](https://github.com/Ackee-Blockchain/trident)|
 |Week 4|[**Fuzzing with Trident II**](./Lesson-4/README.md)|-|
-|Week 5|[**Security Best Practices**](./Lesson-5/README.md)|[**Capture the Flag**](./Capture-the-Flag/README.md) Challenge|
-|Week 6|[**Common Vulnerability Vectors**](./Lesson-6/README.md)|-|
+|Week 5|[**Security Best Practices**](./Lesson-5/README.md)|- |
+|Week 6|[**Common Vulnerability Vectors**](./Lesson-6/README.md)|[**Capture the Flag**](./Capture-the-Flag/README.md) Challenge|
 |Week 7|**Graduation Ceremony**|-|
 </div>
 
