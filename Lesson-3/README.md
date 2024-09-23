@@ -1,7 +1,7 @@
 # Fuzzing with Trident I
 
 > [!IMPORTANT]
-> For more details about the Trident, check the Trident documentation [Tridetn docs](https://ackee.xyz/trident/docs/latest/)
+> For more details about the Trident, check the Trident documentation [Trident docs](https://ackee.xyz/trident/docs/latest/)
 
 ## Table of Contents
 - [Program Issue Overview](#program-issue-overview)
