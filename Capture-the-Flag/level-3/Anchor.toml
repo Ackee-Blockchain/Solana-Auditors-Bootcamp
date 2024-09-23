@@ -1,0 +1,31 @@
+[toolchain]
+
+[features]
+resolution = false
+skip-lint = true
+
+[programs.localnet]
+level_3 = "5zjbNpnsSkCNG6zHzK183ujm6dn6fWeHWeUnk1Rzrs1Y"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/exploit.ts"
+
+
+[[test.validator.account]]
+address = "AsqdvXVEZaSFRNJ5ERSSUL5firH2KBhjP76tsYXB1eKK"
+filename = "accounts/mint.json"
+
+[[test.validator.account]]
+address = "4A4cPZgQx2cZ3aejRLCMSX5839gVM3Gjrii2nxfGVwVj"
+filename = "accounts/factionCreator.json"
+
+[[test.validator.account]]
+address = "GG9rdMcjKFssQEdyLAeFrPSeZCPcGUBowTpwtGerrggp"
+filename = "accounts/faction.json"

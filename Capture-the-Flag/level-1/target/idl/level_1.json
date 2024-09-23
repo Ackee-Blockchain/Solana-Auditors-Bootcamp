@@ -1,0 +1,96 @@
+{
+  "address": "7u6UPvrh9stwx6ApoYPyvn62ScvQtUc3fJgMQXKvbViK",
+  "metadata": {
+    "name": "level_1",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "access_vault",
+      "discriminator": [
+        22,
+        90,
+        183,
+        142,
+        98,
+        79,
+        189,
+        155
+      ],
+      "accounts": [
+        {
+          "name": "explorer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "ancient_vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  99,
+                  105,
+                  101,
+                  110,
+                  116,
+                  95,
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "pin",
+          "type": "u8"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "AncientVault",
+      "discriminator": [
+        39,
+        37,
+        115,
+        17,
+        109,
+        242,
+        71,
+        210
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "AncientVault",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "secret2",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

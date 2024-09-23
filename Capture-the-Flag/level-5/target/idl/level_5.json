@@ -1,0 +1,265 @@
+{
+  "address": "5p55Gzc2FwGGHGp6DmncJaw9gbhLRpzj6Uca8Rv1bRhd",
+  "metadata": {
+    "name": "level_5",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "sender",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "recipient"
+        },
+        {
+          "name": "guardian_set",
+          "writable": true
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "escrow_token_account",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "escrow_pda_authority"
+        },
+        {
+          "name": "sender_token_account",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "system_program"
+        },
+        {
+          "name": "verification_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "guardian_set_index",
+          "type": "u32"
+        },
+        {
+          "name": "signatures_number",
+          "type": "u8"
+        },
+        {
+          "name": "expiration_time",
+          "type": "i64"
+        },
+        {
+          "name": "signatures",
+          "type": {
+            "vec": "u64"
+          }
+        },
+        {
+          "name": "amount_in",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "obtain_secret",
+      "discriminator": [
+        123,
+        215,
+        246,
+        168,
+        114,
+        9,
+        183,
+        93
+      ],
+      "accounts": [
+        {
+          "name": "hacker",
+          "signer": true
+        },
+        {
+          "name": "hacker_ata"
+        },
+        {
+          "name": "mint"
+        }
+      ],
+      "args": [
+        {
+          "name": "secret",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "withdraw",
+      "discriminator": [
+        183,
+        18,
+        70,
+        156,
+        148,
+        109,
+        161,
+        34
+      ],
+      "accounts": [
+        {
+          "name": "recipient",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "recipient_token_account",
+          "writable": true
+        },
+        {
+          "name": "guardian_set",
+          "docs": [
+            "Will be checked in the CPI Program."
+          ]
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "escrow_token_account",
+          "writable": true
+        },
+        {
+          "name": "escrow_pda_authority"
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "verification_program"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "system_program"
+        },
+        {
+          "name": "associated_token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "passphrase",
+          "type": {
+            "vec": "u64"
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Escrow",
+      "discriminator": [
+        31,
+        213,
+        123,
+        187,
+        186,
+        22,
+        218,
+        155
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "WithdrawWindowPassed",
+      "msg": "Withdraw window passed!"
+    },
+    {
+      "code": 6001,
+      "name": "LengthsDoNotCorrespond",
+      "msg": "Number of signatures needs to be the same as Vector Length!"
+    },
+    {
+      "code": 6002,
+      "name": "NotEnoughFunds",
+      "msg": "Not enough funds!"
+    },
+    {
+      "code": 6003,
+      "name": "PastNotAllowed",
+      "msg": "Expiration Time cannot be in the past!"
+    },
+    {
+      "code": 6004,
+      "name": "IncorrectSecrets",
+      "msg": "You need to obtain secrets from the previous level first!"
+    }
+  ],
+  "types": [
+    {
+      "name": "Escrow",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "index",
+            "type": "u32"
+          },
+          {
+            "name": "sender",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "expiration_time",
+            "type": "i64"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}

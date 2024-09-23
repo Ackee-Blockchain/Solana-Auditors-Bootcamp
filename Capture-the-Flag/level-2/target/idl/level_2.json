@@ -1,0 +1,207 @@
+{
+  "address": "5pFB5g5WvBcL5fkaLY5Nz9cqEAxnkRPVgc3DCTKFY7uK",
+  "metadata": {
+    "name": "level_2",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "battle_monster",
+      "discriminator": [
+        249,
+        81,
+        140,
+        116,
+        140,
+        243,
+        91,
+        70
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "explorer_account",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "heal_ally",
+      "discriminator": [
+        52,
+        27,
+        215,
+        189,
+        71,
+        155,
+        112,
+        241
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "injured_explorer",
+          "writable": true
+        },
+        {
+          "name": "healer",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "init_explorer",
+      "discriminator": [
+        28,
+        225,
+        143,
+        179,
+        26,
+        191,
+        205,
+        135
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "explorer_account",
+          "writable": true
+        },
+        {
+          "name": "system_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "secret1",
+          "type": "string"
+        },
+        {
+          "name": "secret2",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "reveal_secret",
+      "discriminator": [
+        126,
+        156,
+        142,
+        60,
+        92,
+        135,
+        177,
+        144
+      ],
+      "accounts": [
+        {
+          "name": "user1",
+          "signer": true
+        },
+        {
+          "name": "user2",
+          "signer": true
+        },
+        {
+          "name": "explorer1_account",
+          "writable": true
+        },
+        {
+          "name": "explorer2_account",
+          "writable": true
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Explorer",
+      "discriminator": [
+        131,
+        148,
+        73,
+        106,
+        166,
+        178,
+        64,
+        42
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "ZombiesNotAllowed",
+      "msg": "Explorear already died!"
+    },
+    {
+      "code": 6001,
+      "name": "NotEnoughMana",
+      "msg": "Not enough mana!"
+    },
+    {
+      "code": 6002,
+      "name": "IncorrectSecrets",
+      "msg": "You need to obtain secrets from the previous level first!"
+    },
+    {
+      "code": 6003,
+      "name": "SameExplorersNotAllowed",
+      "msg": "Two identical explorers detected!"
+    },
+    {
+      "code": 6004,
+      "name": "NotEnoughExperience",
+      "msg": "Not enough experience points to reveal the Secret!"
+    },
+    {
+      "code": 6005,
+      "name": "NotEnoughMonstersDefeated",
+      "msg": "Not enough monsters defeated to reveal the Secret!"
+    }
+  ],
+  "types": [
+    {
+      "name": "Explorer",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mana",
+            "type": "u8"
+          },
+          {
+            "name": "health",
+            "type": "u8"
+          },
+          {
+            "name": "experience",
+            "type": "u8"
+          },
+          {
+            "name": "monsters_defeated",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}
